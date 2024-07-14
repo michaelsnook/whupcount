@@ -1,7 +1,7 @@
 <script>
 	/** @type {import('./$types').PageData} */
 	let { data } = $props()
-	console.log(`inside the component, this is the data`, data)
+	// console.log(`inside the component, this is the data`, data)
 </script>
 
 <h1 class="text-4xl font-bold text-center my-10">Welcome to my own personal whip tracker</h1>
