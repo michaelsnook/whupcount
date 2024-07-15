@@ -1,11 +1,7 @@
 <script>
 	/** @type {import('./$types').PageData} */
+	import { humanDate } from '$lib'
 	const { data } = $props()
-	const options = {
-		year: 'numeric',
-		month: 'long',
-		day: 'numeric',
-	}
 	// console.log('Data is', data.campaign)
 	const evidences = data.campaign.decision_pieces_plus || []
 </script>
@@ -32,7 +28,7 @@
 				>
 				{evidence.name}
 				[{evidence.party}-{evidence.district}]. via: {evidence.source}
-				<small>({new Date(evidence.evidence_valid_at).toLocaleString('en-US', options)})</small>
+				<small class="opacity-70">({humanDate(evidence.evidence_valid_at)})</small>
 			</li>
 		{/each}
 	</ul>
